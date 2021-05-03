@@ -1,5 +1,5 @@
-body {
-  background-image: url('D:/A; Akshat Mehta/web design/simon game/bg.jpg')
+  body {
+  background-image: url('bg.jpg')
 
 }
 
@@ -361,7 +361,7 @@ size: 50%;
   max-height: 100px;
 }
 .swipe-left{
-  background-image: url('D:/A; Akshat Mehta/web design/simon game/swipe left.png');
+  background-image: url('swipe left.png');
 }
 }
 
@@ -410,7 +410,7 @@ size: 50%;
   font-size: 15px;
 }
 .swipe-left{
-  background-image: url('D:/A; Akshat Mehta/web design/simon game/swipe left.png');
+  background-image: url('swipe left.png');
 }
 }
 @media only screen and (min-width: 1536px) and (max-width: 1600px){
@@ -419,5 +419,4 @@ size: 50%;
     padding-right: 175px;
   }
 
-}
 }
