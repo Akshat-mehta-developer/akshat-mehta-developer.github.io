@@ -6,23 +6,449 @@
   <title>MEMORY JOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/jpg" href="D:\A; Akshat Mehta\web design\simon game\favicon.PNG">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+  <link rel="shortcut icon" type="image/jpg" href="favicon.PNG">
 
 
   <link href='https://fonts.googleapis.com/css?family=Original+Surfer&effect=emboss' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="D:/A; Akshat Mehta/web design/simon game/css/index.css">
+<style>
+  body {
+  background-image: url('bg.jpg')
+
+}
+
+.toggle {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.button {
+  border-radius: 50%;
+  font-size: 1.5em;
+  background-color: lightgray;
+}
+
+#switches {
+  position: absolute;
+  font-family: 'Original Surfer', cursive;
+  margin-left: 26px;
+  margin-top: 110px;
+}
+
+.text2 {
+  position: absolute;
+  font-family: 'Original Surfer', cursive;
+  margin-left: 83px;
+  margin-top: 197px;
+}
+
+.text1 {
+  position: absolute;
+  font-family: 'Original Surfer', cursive;
+  margin-left: 19px;
+  margin-top: 142px;
+}
+
+.text1 span:last-child {
+  padding-left: 70px;
+}
+
+#title {
+  font-family: 'Original Surfer', cursive;
+  position: absolute;
+  font-size: 40px;
+  margin-left: 28px;
+  margin-top: 40px;
+}
+
+#turn {
+  position: absolute;
+  background: #330000;
+  color: red;
+  font-family: courier;
+  font-size: 20px;
+  height: 30px;
+  width: 50px;
+  margin-left: 90px;
+  margin-top: 170px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+#outer-circle {
+  background: #385a94;
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  border-style: solid;
+  border-width: 10px;
+  margin-left: 400px;
+  margin-top: 0.2px;
+  box-shadow: 8px 8px 15px 5px #888888;
+}
+
+#topleft {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 250px 0 0 0;
+  -moz-border-radius: 250px 0 0 0;
+  -webkit-border-radius: 250px 0 0 0;
+  background: darkgreen;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0px 0px -250px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#topright {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 250px 0 0;
+  -moz-border-radius: 0 250px 0 0;
+  -webkit-border-radius: 0 250px 0 0;
+  background: darkred;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0px 0px 0px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#bottomleft {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 0 250px;
+  -moz-border-radius: 0 0 0 250px;
+  -webkit-border-radius: 0 0 0 250px;
+  background: goldenrod;
+  top: 50%;
+  left: 50%;
+  margin: 0px -250px 0px -250px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#bottomright {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 250px 0;
+  -moz-border-radius: 0 0 250px 0;
+  -webkit-border-radius: 0 0 250px 0;
+  background: darkblue;
+  top: 50%;
+  left: 50%;
+  margin: 0px 0px -250px 0px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#inner-circle {
+  position: absolute;
+  background: grey;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  border-style: solid;
+  border-width: 10px;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0px 0px -125px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.rules{
+  margin-top: 0px;
+  float: left;
+  font-size: 25px;
+  font-family: calibri;
+  margin-left: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+ .wrapper{
+  margin-left: 1055px;
+  padding-top: 0px;
+  margin-top: 0px;
+ }
+
+.wrapper ul ul li{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.wrapper ul li {
+background: linear-gradient(to bottom left, #c70000, #050173 );
+width: 170px;
+border: 1px solid #fff;
+height: 50px;
+line-height: 50px;
+text-align: center;
+float: left;
+color: #fff;
+font-size: 18px;
+position: relative;
+font-family: 'Satisfy', cursive;
+font-size: 20px;
+margin-right: 10px;
+}
+
+.be:hover{
+  background: linear-gradient(to bottom right, #f6ff54, #abb500);
+}
+
+.in:hover{
+  background: linear-gradient(to bottom right, #ffc96b, #CC780A);
+}
+
+.ad:hover{
+  background: linear-gradient(to bottom right, #e67575, #d13030)
+}
+
+.wrapper ul ul{
+display: none;
+}
+.wrapper ul li:hover > ul{
+display: block;
+}
+
+ul{
+  margin-top: 0px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.deve{
+  color: black;
+  margin-top: 5px;
+  margin-right: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: right;
+  padding-right: 15px;
+  margin-left: 965px;
+  padding-left: 15px;
+  font-size: 18px;
+  font-family: 'Courgette', cursive;
+   }
+
+
+.head{
+  color: white;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke-width: 0.01px;
+  font-family: 'Satisfy', cursive;
+  font-size: 40px;
+  text-shadow: 2px 2px black;
+  text-decoration: underline; 
+/*  margin-left: 1085px;*/
+margin-bottom: 0px;
+margin-top: 15px;
+float: right;
+margin-right: 90px;
+}
+
+.heading{
+color: white;
+-webkit-text-fill-color: red;
+-webkit-text-stroke-width: 1px;
+/*background: -webkit-linear-gradient(#c70000, #050173);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;*/
+font-family: 'Pacifico', cursive;
+font-size: 60px;
+text-shadow: 2px 2px black;
+text-decoration: underline;
+margin-bottom: 0px; 
+margin-top: -50px;
+}
+
+.rules1{
+font-size: 30px;
+color: #ff9900;
+font-family: times new roman;
+background: rgba(255, 255, 255, 0.8);
+padding-left: 25px;
+padding-bottom: 25px;
+padding-top: 25px;
+padding-right: 25px;
+margin-bottom: 0px;
+margin-top: 10px;
+margin-left: 25px;
+}
+
+.tagline{
+color: black;
+/*font-family: 'Orelega One', cursive;*/
+font-family: 'Montserrat', sans-serif;
+font-size: 25px;
+padding-top: 3px;
+margin-top: 0px;
+margin-bottom: 0px;
+background: rgba(255, 255, 255, 0.5);
+padding-left: 10px;
+padding-bottom: 5px;
+margin-right: 0px;
+}
+
+.controls{
+  margin-left: 5px;
+}
+
+.swipe-left{
+  height: 360px;
+  width: 360px;
+  float: left;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 380px) {
+  /* For mobile phones: */
+   .heading{
+    font-size: 35px;
+    padding-top: 50px;
+   }
+.tagline{
+  font-size: 20px;
+}
+.deve{
+  margin-left: 100px;
+  font-size: 15px;
+}
+.head{
+  font-size: 20px;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke-width: 0px;
+  text-decoration: none;
+  padding-left: -10px;
+  margin-right: 10px;
+}
+.wrapper ul li{
+  font-size: 15px;
+  height: 50px;
+  width: 100px;
+}
+.wrapper{
+    margin-left: 145px;
+    margin-top: -15px;
+}
+.rules1{
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 1px;
+  margin-bottom: 25px;
+}
+.controls{
+  height: 30px;
+  width: 150px;
+  margin-top: -30px;
+  margin-left: -80px;
+}
+.font-effect-emboss, .toggle, .button, .toggle, .text1, .text2, #outer-circle, #topleft, #topright, #bottomleft, #bottomright, #inner-circle, #title, #switches, #on, #start, #strict, #turn{
+size: 50%;
+}
+.rules{
+  max-width: 100px;
+  max-height: 100px;
+}
+.swipe-left{
+  background-image: url('swipe left.png');
+}
+}
+
+
+@media only screen and (max-width: 414px) and (max-width: 430px) {
+.heading{
+  font-size: 40px;
+  margin-top: -40px; 
+}
+.deve{
+  margin-left: 100px;
+  font-size: 15px;
+}
+.rules1{
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 175px;
+}
+.controls{
+  height: 50px;
+  width: 150px;
+  margin-left: 23px;
+  margin-top: -2px;
+}
+.head{
+  font-size: 25px;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke-width: 0px;
+  text-decoration: none;
+  margin-right: 10px;
+  float: left;
+  margin-left: 5px;
+}
+.tagline{
+  font-size: 15px;
+}
+.wrapper ul li{
+  font-size: 15px;
+  height: 50px;
+  width: 100px;
+}
+.wrapper{
+  margin-left: -10px;
+}
+.rules{
+  font-size: 15px;
+}
+.swipe-left{
+  background-image: url('swipe left.png');
+}
+}
+@media only screen and (min-width: 1536px) and (max-width: 1600px){
+
+  .head{
+    padding-right: 175px;
+  }
+
+}
+}</style>
 
   <audio id="clip1">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
   </audio>
   <audio id="clip2">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
   </audio>
   <audio id="clip3">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
   </audio>
   <audio id="clip4">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
   </audio>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
@@ -47,32 +473,35 @@
 </head>
 
 <body>
-<h5 class="deve">Developed By Akshat Mehta. Delhi, India.</h5>
+<p class="deve">Developed By Akshat Mehta. Delhi, India.</p>
 
   <h1 class="heading">
     Memory Jog 
   </h1>
   <p class="tagline"> <b><i>Rejuvenate the Simon Game</i></b></p>
 
-  <h1 class="head" id="inter" style="margin-right: 60px;">Intermediate</h1>.
+<h1 class="head" id="inter" >Intermediate</h1>.
 
-
-<input class="rules1" type="button" value="How To Play?" onclick="window.open('D:/A; Akshat Mehta/web design/simon game/html/test.html','_blank','height=406,width=1025')"/>  <div class="wrapper">
+<input class="rules1" type="button" value="How To Play?" onclick="window.open('html/test.html','_blank','height=406,width=1025')"/>  <div class="wrapper">
     <ul>
 
 <li>Levels
             <ul class="hello">
-    <li class="be"><a href="begginer.html">Beginner</a></li>
-    <li class="in"><a href="intermediate.html">Intermediate</a></li>
-    <li class="ad"><a href="advanced.html">Advanced</a></li>
+    <li class="be"><a href="html/begginer.html">Beginner</a></li>
+    <li class="in"><a href="html/intermediate.html">Intermediate</a></li>
+    <li class="ad"><a href="html/advanced.html">Advanced</a></li>
 </ul>
-</div>  <audio class="controls" controls style="float: left;" autoplay="autoplay" loop> 
-    <source src="D:\A; Akshat Mehta\web design\simon game\My Audio.mp3" type="audio/mp3">
+</div>  <audio class="controls" controls style="float: left;" autoplay loop> 
+    <source src="My Audio.mp3" type="audio/mp3">
   </audio>
 
+  <div class="swipe-left">
+    
+  </div>
 
 
-<div style="margin-top: -110px;">
+
+<div id="fg">
   <div id="outer-circle">
     <div id="topleft"></div>
     <div id="topright"></div>
@@ -94,10 +523,10 @@
       </div>
     </div>
   </div>
-  </div>
+</div>
 
 
-  <script  src="D:/A; Akshat Mehta/web design/simon game/js/intermediate.js"></script>
+  <script  src="js/begginer.js"></script>
 
 </body>
 </html>
